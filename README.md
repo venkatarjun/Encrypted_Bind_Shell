@@ -1,4 +1,5 @@
 # Encrypted_Bind_Shell
+![del](https://user-images.githubusercontent.com/84491353/150678792-a3e553e2-1458-46b7-a066-d8248a86bdd1.jpeg)
 
 Bind Shells
 
@@ -18,6 +19,7 @@ Reverse shells solve a lot of headache that bind shells caused us, let’s see h
 2. Reverse shells can use popular ports (e.g. 80, 443) which are usually allowed on egress connections from an internal network to an external network, bypassing firewall restrictions.
 3. We do not need to specify the remote host’s IP address, and therefore do not have to face NAT/PAT address translation.
 Both bind and reverse shells can be gained through common tools such as Netcat, and as a payload alongside an exploit in exploit frameworks like Metasploit.
+![del2](https://user-images.githubusercontent.com/84491353/150678853-1e582c3e-84d5-49c3-a276-418d9149c1da.png)
 
 Encrypted Shells
 
@@ -25,6 +27,11 @@ Both bind and reverse shells communicate in plaintext. That means anyone can sni
 Let’s take a look at this plaintext communication in Wireshark.
 This is a very basic example, but it clearly demonstrates the insecure nature of plaintext shells. We have captured 20 packets, and following the TCP stream shows us both the commands that we executed and the output the target returned. In this case, it seems like the attacker (in red) has gained root privileges on the target (in blue), has found a .txt file containing several passwords and is attempting to exfiltrate this file by setting up a HTTP server that listens on port 443 (quick note: HTTP is another plaintext protocol).
 This is exactly where encrypted shells kick in. Encrypted shells, as the name suggests, encrypt the communication, thereby disallowing intermediary sniffers to decipher what we are trying to accomplish on the target machine.
+![del3](https://user-images.githubusercontent.com/84491353/150678859-54633604-456b-4b81-87a0-e401fed3fa13.png)
 
 
 For clear understanding of the program use vscoode with Better commmands extension installed
+
+
+
+

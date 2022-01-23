@@ -2,7 +2,7 @@
 
 Bind Shells
 
-Bind shells have the listener running on the target and the attacker connect to the listener in order to gain a remote shell.
+Bind shells have the listener running on the target and the attacker connect to the listener in order to gain a remote shell.(Windows machine)
 There is a security issue with bind shells, though, and that is the fact that anyone can connect to the bind shell and run commands. A malicious actor can take advantage of this easily.
 There is another key issue with bind shells, and that is the fact that if we were trying to connect to an internal host’s bind shell, 2 things could prevent us:
 1. Firewalls often have strict inbound traffic filtering
